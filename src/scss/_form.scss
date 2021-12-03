@@ -1,0 +1,20 @@
+$form-input-bg : #26303C;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+$font-all : 'Space Mono', monospace;
+$input-color : rgb(121, 184, 255);
+#octo_input{
+	background-color: $form-input-bg;
+	outline: 0px;
+	border : 0px;
+	border-radius: 0.25rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+	color :$input-color;
+	font-size : 2rem;
+	font-weight: 400;
+	text-align: center;
+	height : 2em;
+	font-family: $font-all;
+	width : 35em;
+}

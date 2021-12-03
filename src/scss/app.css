@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 13%;
+}
+
+.form-container svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.form-container h1 {
+  font-size: 2.6em;
+}
+
+#octo_input {
+  background-color: #26303C;
+  outline: 0px;
+  border: 0px;
+  border-radius: 0.25rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0px auto;
+  color: #79b8ff;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  height: 2em;
+  font-family: "Space Mono", monospace;
+  width: 35em;
+}
+
+body {
+  background-color: #1D2226;
+  font-family: "Inter", sans-serif;
+}
+/*# sourceMappingURL=app.css.map */

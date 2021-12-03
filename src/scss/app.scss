@@ -1,0 +1,11 @@
+@import './form-container';
+@import './form';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+$font : 'Inter', sans-serif;
+$font-all : 'Space Mono', monospace;
+$bg-color : #1D2226;
+body{
+	background-color: $bg-color;
+	font-family:  $font;
+}

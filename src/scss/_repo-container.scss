@@ -1,0 +1,71 @@
+$repo-container-bg : #F6F8FA;
+.repo-container{
+	background-color: $repo-container-bg;
+	width : 100vw;
+	height : max-content;
+	.sub-repo-container{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap : 1.7em;
+
+		padding : 2em;
+		h2{
+			border-bottom: dashed 2px rgb(204, 197, 197);
+		}
+	}
+
+}
+.dropdown{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	ul{
+		list-style: none;
+		position: absolute;
+		background-color: rgb(239, 246, 255);	
+		color: rgb(0, 112, 243);
+		top : 1.2em;
+		border-radius: 5px;
+		li{
+			width: 7.5em;
+			margin-left : -2.5em;
+			padding : 7px;
+			text-align: start;
+			
+		&:hover{
+				background-color: rgba(0, 118, 255, 0.1);;
+				cursor: pointer;
+			}
+		}
+	}
+}
+.button_dropdown{
+	border-radius: 5px;
+	padding : 10px 7px;
+	width : 10em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border : none;
+	outline: none;
+	&:hover{
+	background-color: rgba(0, 118, 255, 0.1);;
+	cursor: pointer;
+	}
+	color: rgb(0, 112, 243);
+	svg{
+		display: inline-block;
+		fill: rgb(0, 112, 243);;
+		user-select: none;
+		vertical-align: text-bottom;
+	}
+}
+.repo-content-container{
+	padding : 2em;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	row-gap: 3em;
+}

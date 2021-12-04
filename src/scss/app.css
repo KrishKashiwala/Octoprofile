@@ -45,8 +45,199 @@
   width: 35em;
 }
 
+.repos {
+  width: 20em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.699);
+  box-shadow: 1px 1px 10px 1px rgba(255, 243, 243, 0.11);
+  -moz-box-shadow: 0 0 7px 1px #999;
+  -webkit-transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
+  transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
+  margin: 0 auto;
+  padding: 3px;
+  height: 10em;
+  background-color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+}
+
+.repos svg {
+  display: inline-block;
+  fill: currentColor;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: text-bottom;
+}
+
+.repos:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px 0px #b80d0d;
+          box-shadow: 0 0 3px 0px #b80d0d;
+}
+
+.repos .repo-top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1em;
+  max-width: 100%;
+  max-height: 5px;
+  overflow: hidden;
+}
+
+.repos .repo-stats {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.repos .repo-stats span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+}
+
+.repo-container {
+  background-color: #F6F8FA;
+  width: 100vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.repo-container .sub-repo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.7em;
+  padding: 2em;
+}
+
+.repo-container .sub-repo-container h2 {
+  border-bottom: dashed 2px #ccc5c5;
+}
+
+.dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.dropdown ul {
+  list-style: none;
+  position: absolute;
+  background-color: #eff6ff;
+  color: #0070f3;
+  top: 1.2em;
+  border-radius: 5px;
+}
+
+.dropdown ul li {
+  width: 7.5em;
+  margin-left: -2.5em;
+  padding: 7px;
+  text-align: start;
+}
+
+.dropdown ul li:hover {
+  background-color: rgba(0, 118, 255, 0.1);
+  cursor: pointer;
+}
+
+.button_dropdown {
+  border-radius: 5px;
+  padding: 10px 7px;
+  width: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  outline: none;
+  color: #0070f3;
+}
+
+.button_dropdown:hover {
+  background-color: rgba(0, 118, 255, 0.1);
+  cursor: pointer;
+}
+
+.button_dropdown svg {
+  display: inline-block;
+  fill: #0070f3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: text-bottom;
+}
+
+.repo-content-container {
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  row-gap: 3em;
+}
+
 body {
   background-color: #1D2226;
   font-family: "Inter", sans-serif;
+  margin: 0;
 }
 /*# sourceMappingURL=app.css.map */

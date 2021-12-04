@@ -1,5 +1,7 @@
 @import './form-container';
 @import './form';
+@import './repos';
+@import './repo-container';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 $font : 'Inter', sans-serif;
@@ -8,4 +10,5 @@ $bg-color : #1D2226;
 body{
 	background-color: $bg-color;
 	font-family:  $font;
+	margin : 0;
 }

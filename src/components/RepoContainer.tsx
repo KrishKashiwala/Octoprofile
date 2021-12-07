@@ -29,9 +29,9 @@ const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 					{
 						customDrop && <ul>
 
-							<li>Stars</li>
-							<li>Repos</li>
-							<li>Forks</li>
+							<li key="Stars">Stars</li>
+							<li key="repos">Repos</li>
+							<li key="forks">Forks</li>
 						</ul>
 					}
 
@@ -44,6 +44,7 @@ const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 							name={item?.name}
 							language={item?.language}
 							url={item?.html_url}
+							description={item?.description}
 							fork_count={item?.forks_count}
 							watchers_count={item?.watchers_count}
 						/>

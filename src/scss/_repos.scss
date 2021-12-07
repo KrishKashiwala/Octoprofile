@@ -1,49 +1,82 @@
-.repos{
-	width : 20em; 
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+$font: "Inter", sans-serif;
+$font-all: "Space Mono", monospace;
+a {
+	text-decoration: none;
+	color: black;
+}
+.repos {
+	width: 20em;
 	box-sizing: border-box;
 	-webkit-box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.699);
 	box-shadow: 1px 1px 10px 1px rgba(255, 243, 243, 0.11);
 	-moz-box-shadow: 0 0 7px 1px #999;
 	transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
-	margin : 0 auto;
-	padding : 3px;
-	height: 10em;
+	margin: 0 auto;
+	padding: 3px;
+	height: 15em;
 	background-color: white;
+	overflow: hidden;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	border-radius: 5px;
-		svg{
-			display: inline-block;
-			fill: currentColor;
-			user-select: none;
-			vertical-align: text-bottom;
-		}
-	&:hover{
-		cursor: pointer;
+	-webkit-box-shadow: 0 0 1px 1px #999;
+	box-shadow: 0 0 9px 1px rgb(214, 211, 211);
+	-moz-box-shadow: 0 0 7px 1px rgb(214, 211, 211);
+	transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
 
-		box-shadow: 0 0 3px 0px rgb(184, 13, 13);
+	svg {
+		display: inline-block;
+		fill: currentColor;
+		user-select: none;
+		vertical-align: text-bottom;
 	}
-	.repo-top{
+	&:hover {
+		cursor: pointer;
+		transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+		box-shadow: 0 0 9px 1px rgb(235, 234, 234);
+	}
+	.repo-des {
+		padding: 1.5em;
+		opacity: 0.6;
+		text-align: start;
+	}
+	.repo-top {
 		position: relative;
 		display: flex;
-		padding : 1em;
+		padding: 1.5em;
 		flex-direction: row;
-		gap : 1em;
+		gap: 1em;
+		overflow: hidden;
 		max-width: 100%;
 		max-height: 5px;
-		overflow: hidden;
+		align-items: center;
+		div {
+			text-align: center;
+			font-family: $font-all;
+			font-weight: bold;
+			letter-spacing: 1px;
+			font-size: 18px;
+			overflow: hidden;
+		}
 	}
-	.repo-stats{
-		padding : 1em;
+	.repo-stats {
+		padding: 1em;
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-evenly;
-		span{
+		flex-direction: row;
+		justify-content: space-between;
+		span {
 			display: flex;
 			justify-content: center;
-			gap : 4px;
+			gap: 4px;
+		}
+		.sub-repo {
+			display: flex;
+			flex-direction: row;
 		}
 	}
 }

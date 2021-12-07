@@ -1,0 +1,12 @@
+.card-container {
+	margin-left: 9em;
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+	-webkit-box-pack: center;
+	align-items: center;
+	justify-content: center;
+	max-width: 1200px !important;
+	margin-top: -15em !important;
+}

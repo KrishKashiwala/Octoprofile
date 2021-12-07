@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import CardContainer from "./CardContainer";
+import InfoContainer from "./InfoContainer";
 import RepoContainer from "./RepoContainer";
 const Profile = () => {
 	const location: any = useLocation()
@@ -22,6 +24,8 @@ const Profile = () => {
 	console.log(datas)
 	return (
 		<div className="profile-container">
+			<InfoContainer user={location?.state?.user} API_URL={API_URL} API_CLIENT_ID={API_CLIENT_ID} API_CLIENT_SECRET={API_CLIENT_SECRET} />
+			<CardContainer />
 			<RepoContainer user={location?.state?.user} API_URL={API_URL} API_CLIENT_ID={API_CLIENT_ID} API_CLIENT_SECRET={API_CLIENT_SECRET} />
 		</div>
 	)

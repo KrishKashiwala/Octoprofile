@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +49,11 @@
   width: 35em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .repos {
   width: 20em;
   -webkit-box-sizing: border-box;
@@ -56,8 +65,9 @@
   transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
   margin: 0 auto;
   padding: 3px;
-  height: 10em;
+  height: 15em;
   background-color: white;
+  overflow: hidden;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +80,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 1px 1px #999;
+  box-shadow: 0 0 9px 1px #d6d3d3;
+  -moz-box-shadow: 0 0 7px 1px #d6d3d3;
+  transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
 }
 
 .repos svg {
@@ -84,8 +98,16 @@
 
 .repos:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 3px 0px #b80d0d;
-          box-shadow: 0 0 3px 0px #b80d0d;
+  -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-box-shadow: 0 0 9px 1px #ebeaea;
+          box-shadow: 0 0 9px 1px #ebeaea;
+}
+
+.repos .repo-des {
+  padding: 1.5em;
+  opacity: 0.6;
+  text-align: start;
 }
 
 .repos .repo-top {
@@ -93,14 +115,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1em;
+  padding: 1.5em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 1em;
+  overflow: hidden;
   max-width: 100%;
   max-height: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repos .repo-top div {
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
   overflow: hidden;
 }
 
@@ -112,9 +146,13 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .repos .repo-stats span {
@@ -127,15 +165,23 @@
   gap: 4px;
 }
 
+.repos .repo-stats .sub-repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .repo-container {
-  background-color: #F6F8FA;
-  width: 100vw;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  background-color: #f6f8fa;
 }
 
 .repo-container .sub-repo-container {
+  margin-top: 25em;
+  height: 30em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,15 +192,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
   gap: 1.7em;
   padding: 2em;
 }
 
 .repo-container .sub-repo-container h2 {
   border-bottom: dashed 2px #ccc5c5;
+  padding-bottom: 6px;
 }
 
 .dropdown {
@@ -227,6 +274,7 @@
 }
 
 .repo-content-container {
+  margin-top: -10em;
   padding: 2em;
   display: -ms-grid;
   display: grid;
@@ -235,8 +283,197 @@
   row-gap: 3em;
 }
 
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2em;
+  margin-bottom: 20em;
+}
+
+.info-container img {
+  width: 10em;
+  height: 10em;
+  background-size: contain;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 10px solid blue;
+}
+
+.info-container .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-container .name span {
+  font-size: 3em;
+}
+
+.info-container .name a {
+  color: #0070f3;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+}
+
+.info-container .bio {
+  margin-top: 20px;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.info-container .location-join {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  color: #c8e1db;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.info-container .location-join svg {
+  fill: currentColor;
+  color: #c8e1db;
+}
+
+.info-container .location-join .same-lojo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.info-container .location-join .add {
+  margin-left: 20px;
+}
+
+.info-container .pro-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1em;
+}
+
+.info-container .info-box {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #24292e;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+  gap: 10px;
+  text-align: center;
+}
+
+.info-container .info-box #label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-top: 0.75rem;
+  color: rgba(200, 225, 255, 0.7);
+}
+
+.card-container {
+  margin-left: 9em;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  max-width: 1200px !important;
+  margin-top: -15em !important;
+}
+
+.card {
+  background-color: white;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+}
+
+.card header {
+  font-size: 24px;
+  color: #24292e;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-bottom: 2px dashed #ccc5c5;
+  padding-bottom: 6px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 body {
-  background-color: #1D2226;
+  background-color: #1d2226;
   font-family: "Inter", sans-serif;
   margin: 0;
 }

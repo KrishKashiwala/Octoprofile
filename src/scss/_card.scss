@@ -1,3 +1,9 @@
+.main-card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 3em;
+}
 .card {
 	background-color: rgb(255, 255, 255);
 	max-width: 500px;
@@ -11,5 +17,8 @@
 		border-bottom: 2px dashed rgb(204, 197, 197);
 		padding-bottom: 6px;
 		width: fit-content;
+	}
+	canvas {
+		margin-top: 2em;
 	}
 }

@@ -25,7 +25,7 @@ const Profile = () => {
 	return (
 		<div className="profile-container">
 			<InfoContainer user={location?.state?.user} API_URL={API_URL} API_CLIENT_ID={API_CLIENT_ID} API_CLIENT_SECRET={API_CLIENT_SECRET} />
-			<CardContainer />
+			<CardContainer user={location?.state?.user} API_URL={API_URL} API_CLIENT_ID={API_CLIENT_ID} API_CLIENT_SECRET={API_CLIENT_SECRET} />
 			<RepoContainer user={location?.state?.user} API_URL={API_URL} API_CLIENT_ID={API_CLIENT_ID} API_CLIENT_SECRET={API_CLIENT_SECRET} />
 		</div>
 	)

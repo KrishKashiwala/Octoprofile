@@ -1,4 +1,6 @@
-const Repo: React.FC<{ name: string, url: string, description: string, language: string, fork_count: number, watchers_count: number }> = ({ name, url, description, language, fork_count, watchers_count }) => {
+// import { backgroundColor, langColors } from "../utils/colors"
+
+const Repo: React.FC<{ name: string, url: string, description: string, language: string, fork_count: number, watchers_count: number, repoData: any }> = ({ name, url, description, language, repoData, fork_count, watchers_count }) => {
 	return (
 		<a href={url} target="_blank" rel="noreferrer">
 			<div className="repos">
@@ -12,7 +14,7 @@ const Repo: React.FC<{ name: string, url: string, description: string, language:
 				<div className="repo-stats">
 					<div className="sub-repo">
 
-						<span>
+						<span  >
 							<span>{language}</span>
 						</span>
 						<span>
@@ -29,7 +31,7 @@ const Repo: React.FC<{ name: string, url: string, description: string, language:
 					</div>
 				</div>
 			</div>
-		</a>
+		</a >
 	)
 }
 export default Repo

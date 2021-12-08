@@ -41,6 +41,7 @@ const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 				{
 					data?.slice(0, 8).map((item: any) => (
 						<Repo
+							repoData={data}
 							name={item?.name}
 							language={item?.language}
 							url={item?.html_url}

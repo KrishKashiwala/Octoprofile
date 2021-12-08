@@ -139,7 +139,7 @@ a {
 }
 
 .repos .repo-stats {
-  padding: 1em;
+  padding: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +436,7 @@ a {
 }
 
 .card-container {
-  margin-left: 9em;
+  margin-left: 11.8em;
   position: absolute;
   display: -ms-grid;
   display: grid;
@@ -451,6 +451,20 @@ a {
       justify-content: center;
   max-width: 1200px !important;
   margin-top: -15em !important;
+}
+
+.main-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
 }
 
 .card {
@@ -470,6 +484,10 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.card canvas {
+  margin-top: 2em;
 }
 
 body {

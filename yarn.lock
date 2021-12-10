@@ -1830,6 +1830,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-flip-move@^2.9.12":
+  version "2.9.12"
+  resolved "https://registry.yarnpkg.com/@types/react-flip-move/-/react-flip-move-2.9.12.tgz#5a6270a44b3d5b3ad6dcc3f105823c0c26001039"
+  integrity sha512-NoQXHUFwboxbTV1NWf55ztoESiX/ShHUySG8uRCiu8ExBH+K033mRHAnBHAK8izVsH/eSfA3/IA1o1CqHA8QGg==
+  dependencies:
+    react-flip-move "*"
+
 "@types/react-router-dom@^5.3.2":
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.3.2.tgz#ebd8e145cf056db5c66eb1dac63c72f52e8542ee"
@@ -9751,6 +9758,11 @@ react-error-overlay@^6.0.9:
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
+
+react-flip-move@*, react-flip-move@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-flip-move/-/react-flip-move-3.0.4.tgz#261f66101fbc305f9b7b28959c5cf8236413ca74"
+  integrity sha512-HyUVv9g3t/BS7Yz9HgrtYSWyRNdR2F81nkj+C5iRY675AwlqCLB5JU9mnZWg0cdVz7IM4iquoyZx70vzZv3Z8Q==
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

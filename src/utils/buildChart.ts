@@ -1,4 +1,4 @@
-import  Chart  from 'chart.js/auto';
+import Chart from 'chart.js/auto';
 import theme from '../style/theme';
 const { fonts } = theme;
 
@@ -28,7 +28,6 @@ const buildScales = (axes: any) => {
 
 const buildLegend = (legend: any) => {
 	const leg = {
-		position: 'right',
 		labels: {
 			fontFamily: fonts.inter,
 		},
@@ -50,7 +49,7 @@ const buildChart = (config: { ctx: any; chartType: any; labels: any; data: any; 
 					data,
 					backgroundColor,
 					borderColor,
-					borderWidth: 1,
+					borderWidth: 1
 				},
 			],
 		},

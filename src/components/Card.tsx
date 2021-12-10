@@ -35,11 +35,11 @@ const Card = ({ langData, repoData }: any) => {
 		const LIMIT = 5;
 		const sortProperty = 'stargazers_count';
 		const mostStarredRepos = repoData
-			.filter((repo: { fork: any; }) => !repo.fork)
-			.sort((a: { [x: string]: number; }, b: { [x: string]: number; }) => b[sortProperty] - a[sortProperty])
+			.filter(repo => !repo.fork)
+			.sort((a, b) => b[sortProperty] - a[sortProperty])
 			.slice(0, LIMIT);
-		const labels = mostStarredRepos.map((repo: { name: any; }) => repo.name);
-		const data = mostStarredRepos.map((repo: { [x: string]: any; }) => repo[sortProperty]);
+		const labels = mostStarredRepos.map(repo => repo.name);
+		const data = mostStarredRepos.map(repo => repo[sortProperty]);
 
 		setStarChartData(data);
 
@@ -51,9 +51,6 @@ const Card = ({ langData, repoData }: any) => {
 			buildChart(config);
 		}
 	};
-
-
-
 
 	// Create Stars per language chart
 	//eslint-disable-next-line

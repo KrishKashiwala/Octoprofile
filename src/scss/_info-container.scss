@@ -98,3 +98,40 @@ $font-all: "Space Mono", monospace;
 		}
 	}
 }
+
+@media only screen and (max-width: 420px) {
+	.info-container {
+		.name {
+			span {
+				font-size: 2em;
+			}
+			a {
+				font-size: 1.3em;
+			}
+		}
+		.bio {
+			text-align: center;
+			margin: 1em;
+		}
+		.location-join {
+			width: 100%;
+			gap: 5px;
+			align-items: center;
+			.same-lojo {
+				gap: 5px;
+				span {
+					font-size: 11px;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+		.info-box {
+			margin-bottom: 0px;
+			padding: 10px;
+			gap: 5px;
+			#label {
+				font-size: 10px;
+			}
+		}
+	}
+}

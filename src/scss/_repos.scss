@@ -63,7 +63,7 @@ a {
 		}
 	}
 	.repo__stats {
-		display: flex;
+		display: flex !important;
 		-webkit-box-pack: justify;
 		justify-content: space-between;
 		font-size: 13px;
@@ -73,5 +73,24 @@ a {
 		-webkit-box-flex: 1;
 		flex-grow: 1;
 		display: flex;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.repos {
+		width: 30vw;
+		margin-left: -2em;
+		height: auto;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.repos {
+		width: 90vw;
+		height: auto;
+		margin-left: -3.5em;
+		justify-content: safe;
+		.repo__name {
+			gap: 6px;
+		}
 	}
 }

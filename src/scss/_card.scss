@@ -22,3 +22,32 @@
 		margin-top: 2em;
 	}
 }
+
+@media only screen and (max-width: 1100px) {
+	.main-card {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		padding: 1px;
+		width: auto;
+		margin: 2em;
+		margin-top: 10em;
+		overflow: hidden;
+	}
+	.card {
+		width: 20vw;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.main-card {
+		display: flex;
+		flex-direction: column;
+		margin: 0em;
+		padding: 1em;
+		overflow: hidden;
+	}
+	.card {
+		width: 80vw;
+	}
+}

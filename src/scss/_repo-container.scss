@@ -7,7 +7,6 @@ $repo-container-bg: #f6f8fa;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: baseline;
 		gap: 1em;
 		margin-left: 5em;
 		h2 {
@@ -72,4 +71,45 @@ $repo-container-bg: #f6f8fa;
 	padding: 2em;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+}
+@media only screen and (max-width: 1100px) {
+	.repo-container {
+		width: 100vw;
+		gap: 0;
+		padding: 0px;
+		margin-top: 30em;
+		.sub-repo-container {
+			margin-left: 3em;
+		}
+	}
+	.repo-content-container {
+		grid-template-columns: auto auto auto;
+	}
+	.dropdown {
+		ul > li {
+			width: 4em;
+		}
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.repo-container {
+		width: 100vw;
+		gap: 0;
+		padding: 0px;
+		margin-top: 95em;
+		h2 {
+			margin-left: -1em;
+		}
+	}
+	.repo-content-container {
+		grid-template-columns: none;
+		grid-template-rows: auto;
+	}
+	.dropdown {
+		ul > li {
+			margin: 0;
+			width: 4em;
+		}
+	}
 }

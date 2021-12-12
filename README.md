@@ -1,8 +1,8 @@
 # OctoProfile
 
 A nicer look at your GitHub Profile! With charts!
-
-![demo](https://raw.githubusercontent.com/bchiang7/octoprofile/master/static/og.png)
+<a href="https://octoprofile-six.vercel.app/" target = "_blank">Demo</a>
+![demo](https://raw.githubusercontent.com/KrishKashiwala/Octoprofile/main/src/static/demo.png)
 
 Built with:
 

@@ -1,7 +1,8 @@
 import Card from "./Card";
 import GhPolyglot from 'gh-polyglot';
 import { useEffect, useState } from "react";
-const CardContainer: React.FC<{ user: string | undefined, API_URL: string, API_CLIENT_ID: string, API_CLIENT_SECRET: string }> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user }) => {
+const CardContainer: React.FC<{ user: string | undefined, token: string | undefined, API_URL: string | undefined, API_CLIENT_ID: string | undefined, API_CLIENT_SECRET: string | undefined }> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user, token }) => {
+	//eslint-disable-next-line
 	const [userData, setUserData] = useState(null);
 	//eslint-disable-next-line
 	const [langData, setLangData] = useState(null);
@@ -63,9 +64,6 @@ const CardContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 
 		// eslint-disable-next-line
 	}, [])
-	console.log('user  : ', userData)
-	console.log(`repo  :`, repoData)
-	console.log(`lang  : `, langData)
 	return (
 		<div className="card-container">
 			{langData && repoData && <Card langData={langData} repoData={repoData} />}

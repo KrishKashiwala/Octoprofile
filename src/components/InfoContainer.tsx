@@ -1,19 +1,17 @@
 import React from "react"
 import InfoBox from "./InfoBox"
 
-const InfoContainer: React.FC<{ user: string | undefined, API_URL: string, API_CLIENT_ID: string, API_CLIENT_SECRET: string }> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user }) => {
+const InfoContainer: React.FC<{ user: string | undefined, API_URL: string, API_CLIENT_ID: string | undefined, token: string | undefined, API_CLIENT_SECRET: string | undefined }> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user, token }) => {
 	const [data, setData] = React.useState() as any
 	const temp = async () => {
 		let data = await fetch(`${API_URL}/${user}?client_id=${API_CLIENT_ID}&client_secret=${API_CLIENT_SECRET}`).then(res => res.json()).catch(e => console.log(e))
 		setData(data)
-		console.log(data)
 	}
 	React.useEffect(() => {
 		temp()
 		// eslint-disable-next-line
 	}, [])
 	var dated = new Date(data?.created_at).toDateString()
-	console.log(data)
 	return (
 		<div className="info-container">
 			<img src={data?.avatar_url} alt="" />

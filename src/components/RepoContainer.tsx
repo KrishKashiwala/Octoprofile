@@ -2,7 +2,9 @@ import React, { SetStateAction, useEffect, useState } from "react"
 import FlipMove from "react-flip-move";
 import Repo from "./Repo"
 
-const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_CLIENT_ID: string, API_CLIENT_SECRET: string }> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user }) => {
+const RepoContainer: React.FC<{
+	user: string | undefined, token: string | undefined, API_URL: string, API_CLIENT_ID: string | undefined, API_CLIENT_SECRET: string | undefined
+}> = ({ API_URL, API_CLIENT_ID, API_CLIENT_SECRET, user, token }) => {
 	const [customDrop, setCustomDrop] = React.useState(false)
 	const [sortType, setSortType] = useState('stars');
 	const [repoData, setRepoData] = useState<any>(null);
@@ -26,12 +28,10 @@ const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 
 
 	};
-	console.log(repoData)
 	const changeRepoSort = (sortType: SetStateAction<string>) => {
 		setSortType(sortType);
 		setCustomDrop(false)
 	};
-	console.log(repoData)
 	const sortTypes = ['stars', 'forks', 'size'];
 	useEffect(() => {
 		getRepoData()
@@ -51,7 +51,7 @@ const RepoContainer: React.FC<{ user: string | undefined, API_URL: string, API_C
 					{
 						customDrop && <ul>
 							{sortTypes.map((type, item) => (
-								<li onClick={() => changeRepoSort(type)} key={item}>{type}</li>
+								<li  onClick={() => changeRepoSort(type)} key={item}>{type}</li>
 							))}
 						</ul>
 					}
